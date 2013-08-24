@@ -36,12 +36,11 @@ public class Test3 {
 	private final static Logger logger = LoggerFactory.getLogger(Test2.class);
 	private Random random = new Random();
 
-	private Object lock1 = new Object();
-	private Object lock2 = new Object();
-
-	//Lists.newArrayList()来自于Google Guava类库
+	// Lists.newArrayList()来自于Google Guava类库
 	private List<Integer> list1 = Lists.newArrayList();
 	private List<Integer> list2 = Lists.newArrayList();
+
+	private Object lock1 = new Object();
 
 	public void task1() {
 		synchronized (lock1) {
@@ -56,6 +55,8 @@ public class Test3 {
 		}
 
 	}
+
+	private Object lock2 = new Object();
 
 	public void task2() {
 		synchronized (lock2) {
