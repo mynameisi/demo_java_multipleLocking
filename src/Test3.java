@@ -40,6 +40,7 @@ public class Test3 {
 	private List<Integer> list1 = Lists.newArrayList();
 	private List<Integer> list2 = Lists.newArrayList();
 
+	//第一把锁
 	private Object lock1 = new Object();
 
 	public void task1() {
@@ -56,6 +57,7 @@ public class Test3 {
 
 	}
 
+	//第二把锁
 	private Object lock2 = new Object();
 
 	public void task2() {
